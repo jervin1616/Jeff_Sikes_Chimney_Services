@@ -1159,18 +1159,18 @@ a { color: inherit; }
       <div class="form-success" id="formSuccess">
         <span>✓</span> Your request was sent! We'll be in touch within one business day.
       </div>
-      <form class="form" onsubmit="handleSubmit(event)" id="contactForm">
+      <form class="form" id="contactForm" onsubmit="handleMailto(event)">
         <div class="form-row">
-          <div class="field"><label>First Name *</label><input type="text" placeholder="John" required /></div>
-          <div class="field"><label>Last Name</label><input type="text" placeholder="Smith" /></div>
+          <div class="field"><label>First Name *</label><input type="text" id="fname" placeholder="John" required /></div>
+          <div class="field"><label>Last Name</label><input type="text" id="lname" placeholder="Smith" /></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>Phone</label><input type="tel" placeholder="(910) 000-0000" /></div>
-          <div class="field"><label>Email *</label><input type="email" placeholder="you@email.com" required /></div>
+          <div class="field"><label>Phone</label><input type="tel" id="phone" placeholder="(910) 000-0000" /></div>
+          <div class="field"><label>Email *</label><input type="email" id="email" placeholder="you@email.com" required /></div>
         </div>
         <div class="field">
           <label>Service Needed</label>
-          <select>
+          <select id="service">
             <option value="">Select a service…</option>
             <option>Chimney Cleaning / Sweep</option>
             <option>Chimney Inspection (Level I or II)</option>
@@ -1187,7 +1187,7 @@ a { color: inherit; }
         </div>
         <div class="field">
           <label>Message</label>
-          <textarea placeholder="Describe your chimney or fireplace situation, any concerns, or questions…"></textarea>
+          <textarea id="message" placeholder="Describe your chimney or fireplace situation, any concerns, or questions…"></textarea>
         </div>
         <button type="submit" class="btn btn-solid" style="align-self:flex-start;margin-top:.2rem">Send Request →</button>
       </form>
@@ -1350,19 +1350,43 @@ if (heroBg) {
   else heroBg.addEventListener('load', start);
 }
 
-/* ── Contact Form ── */
-function handleSubmit(e) {
+/* ── Contact Form — Mailto ── */
+function handleMailto(e) {
   e.preventDefault();
-  var form = document.getElementById('contactForm');
+  var fname   = document.getElementById('fname').value.trim();
+  var lname   = document.getElementById('lname').value.trim();
+  var phone   = document.getElementById('phone').value.trim();
+  var email   = document.getElementById('email').value.trim();
+  var service = document.getElementById('service').value;
+  var message = document.getElementById('message').value.trim();
+
+  var subject = 'Website Inquiry' + (service ? ' — ' + service : '') + (fname ? ' from ' + fname + (lname ? ' ' + lname : '') : '');
+
+  var body = '';
+  body += 'Name: '    + fname + (lname ? ' ' + lname : '') + '\n';
+  body += 'Phone: '   + (phone   || 'Not provided') + '\n';
+  body += 'Email: '   + (email   || 'Not provided') + '\n';
+  body += 'Service: ' + (service || 'Not specified') + '\n\n';
+  body += 'Message:\n' + (message || 'No message provided');
+
+  var mailto = 'mailto:JeffSikesChimneyservices@gmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body='    + encodeURIComponent(body);
+
+  window.location.href = mailto;
+
+  // Show confirmation
+  var form    = document.getElementById('contactForm');
   var success = document.getElementById('formSuccess');
-  if (!form || !success) return;
-  form.style.display = 'none';
-  success.classList.add('show');
-  setTimeout(function() {
-    success.classList.remove('show');
-    form.style.display = 'flex';
-    form.reset();
-  }, 5000);
+  if (form && success) {
+    form.style.display = 'none';
+    success.classList.add('show');
+    setTimeout(function() {
+      success.classList.remove('show');
+      form.style.display = 'flex';
+      form.reset();
+    }, 5000);
+  }
 }
 
 /* ── Close mobile drawer on outside click ── */
