@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <title>Jeff Sikes Chimney Services, LLC | Wilmington, NC</title>
 <!-- Primary Meta -->
 <meta name="description" content="Jeff Sikes Chimney Services — Wilmington's longest-running CSIA-certified chimney sweep. Honest flat-rate pricing, licensed &amp; insured. Serving the greater Cape Fear region. Call (910) 399-6314.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jervin1616.github.io/Jeff_Sikes_Chimney_Services/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -71,8 +76,6 @@
   }
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
 <style>
 /* ════════════════════════════════════════════
@@ -490,7 +493,6 @@ a { color: inherit; }
 /* ════════════════════════════════════════════
    SERVICES PAGE
 ════════════════════════════════════════════ */
-.services-page { }
 .services-intro { padding: 4rem 3.5rem 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; background: var(--paper); }
 .services-full-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--sand); }
 .svc-full-card {
@@ -512,16 +514,10 @@ a { color: inherit; }
 .about-story-img { position: relative; overflow: hidden; min-height: 500px; }
 .about-story-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s var(--ease); }
 .about-story-img:hover img { transform: scale(1.03); }
-.about-story-copy { background: var(--white); padding: 5rem 4.5rem; display: flex; flex-direction: column; justify-content: center; }
+.about-story-copy { background: var(--deep); padding: 5rem 4.5rem; display: flex; flex-direction: column; justify-content: center; }
 .about-story-copy p { font-size: .95rem; line-height: 1.85; color: var(--mist); margin: 1rem 0; max-width: 50ch; }
 .about-story-copy p:last-of-type { margin-bottom: 2rem; }
 
-.about-values { padding: 5rem 3.5rem; background: var(--paper); }
-.values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; background: var(--sand); margin-top: 3rem; }
-.value-card { background: var(--white); padding: 2.5rem 2rem; }
-.value-icon { font-size: 1.6rem; margin-bottom: 1rem; }
-.value-title { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: .6rem; }
-.value-desc { font-size: .83rem; line-height: 1.72; color: var(--mist); }
 
 .about-team { display: grid; grid-template-columns: 1fr 1fr; }
 .about-team-img { position: relative; overflow: hidden; min-height: 420px; }
@@ -601,8 +597,6 @@ a { color: inherit; }
 }
 .form-success.show { display: flex; }
 
-.map-embed { background: var(--paper); }
-.map-embed iframe { width: 100%; height: 380px; border: none; display: block; filter: grayscale(20%); }
 
 /* ════════════════════════════════════════════
    FOOTER
@@ -611,7 +605,6 @@ a { color: inherit; }
   background: var(--ink); padding: 3.5rem 3rem 2rem;
 }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-.footer-brand-col {}
 .footer-logo-name { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; color: var(--gold); }
 .footer-logo-sub { font-size: .6rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-top: 3px; margin-bottom: 1rem; }
 .footer-tagline { font-size: .85rem; line-height: 1.72; color: rgba(255,255,255,.38); max-width: 36ch; }
@@ -654,7 +647,6 @@ a { color: inherit; }
   .hero-copy-wrap { padding: 3rem 1.5rem; }
   .home-intro .intro-copy, .about-story-copy, .about-team-copy, .contact-details-col, .contact-form-col { padding: 3rem 1.5rem; }
   .home-services, .home-reviews { padding: 4rem 1.5rem; }
-  .about-values { padding: 4rem 1.5rem; }
   .services-intro { padding: 3rem 1.5rem; }
   .page-hero-content { padding: 2.5rem 1.5rem; }
   .services-full-grid, .services-preview-grid { grid-template-columns: 1fr; }
@@ -662,6 +654,7 @@ a { color: inherit; }
   .reviews-row, .reviews-full-grid { grid-template-columns: 1fr; padding: 1.5rem; }
   .stats-bar { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
+  .footer-brand-col { flex-direction: column; align-items: flex-start; }
   .cta-banner { padding: 2.5rem 1.5rem; flex-direction: column; align-items: flex-start; }
   .form-row { grid-template-columns: 1fr; }
   .team-cards { grid-template-columns: 1fr; }
@@ -670,16 +663,53 @@ a { color: inherit; }
 }
 
 
+/* Skip to content link (accessibility) */
+.skip-link {
+  position: absolute; top: -50px; left: 1rem;
+  background: var(--rust); color: #fff;
+  padding: .5rem 1rem; font-size: .875rem; font-weight: 600;
+  z-index: 9999; text-decoration: none;
+  transition: top .2s var(--ease);
+}
+.skip-link:focus { top: 1rem; }
+
+/* Keyboard focus styles */
+.btn:focus-visible,
+.nav-menu li a:focus-visible,
+.nav-tel:focus-visible,
+.hamburger:focus-visible,
+.nav-drawer ul li a:focus-visible,
+.footer-links-list a:focus-visible,
+.footer-legal a:focus-visible,
+.footer-contact-item a:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+/* White CTA button variant (replaces repeated inline style) */
+.btn-white { background: #fff; color: var(--rust); }
+.btn-white:hover { background: var(--cream); }
+
+/* Footer brand column */
+.footer-brand-col { display: flex; align-items: center; gap: 1.5rem; }
+
+/* Service area section */
+.service-area { background: var(--paper); padding: 4rem 3rem; text-align: center; }
+
+/* Breadcrumb clickable spans */
+.breadcrumb [onclick] { cursor: pointer; }
+
 </style>
 </head>
 <body>
 
 <!-- ══════════════════ NAV ══════════════════ -->
-<nav id="nav">
-  <div class="nav-logo" onclick="navigate('home')">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav id="nav" aria-label="Main navigation">
+  <a class="nav-logo" href="#" onclick="navigate('home');return false;" aria-label="Jeff Sikes Chimney Services — go to home page">
     <div class="nav-logo-name">Jeff Sikes Chimney Services</div>
     <div class="nav-logo-sub">Wilmington, NC · CSIA Certified · Licensed &amp; Insured</div>
-  </div>
+  </a>
 
   <ul class="nav-menu">
     <li><a onclick="navigate('home')"    data-page="home">Home</a></li>
@@ -704,11 +734,11 @@ a { color: inherit; }
 <!-- Mobile drawer -->
 <div class="nav-drawer" id="navDrawer">
   <ul>
-    <li><a onclick="navigate('home');closeDrawer()">Home</a></li>
-    <li><a onclick="navigate('services');closeDrawer()">Services</a></li>
-    <li><a onclick="navigate('about');closeDrawer()">About Us</a></li>
-    <li><a onclick="navigate('reviews');closeDrawer()">Reviews</a></li>
-    <li><a onclick="navigate('contact');closeDrawer()">Contact</a></li>
+    <li><a href="#" onclick="navigate('home');closeDrawer();return false;">Home</a></li>
+    <li><a href="#" onclick="navigate('services');closeDrawer();return false;">Services</a></li>
+    <li><a href="#" onclick="navigate('about');closeDrawer();return false;">About Us</a></li>
+    <li><a href="#" onclick="navigate('reviews');closeDrawer();return false;">Reviews</a></li>
+    <li><a href="#" onclick="navigate('contact');closeDrawer();return false;">Contact</a></li>
   </ul>
   <div class="drawer-cta">
     <a href="tel:9103996314" class="btn btn-solid" style="width:100%;justify-content:center;">☎ (910) 399-6314</a>
@@ -720,6 +750,7 @@ a { color: inherit; }
      HOME PAGE
 ══════════════════════════════════════════ -->
 <div id="page-home" class="page active">
+<a id="main-content" tabindex="-1"></a>
 
   <!-- Hero -->
   <section class="home-hero">
@@ -779,7 +810,7 @@ a { color: inherit; }
   <!-- About Intro -->
   <section class="home-intro">
     <div class="intro-img-col reveal-left">
-      <img src="jeff-sikes-chimney-sweep-equipment-wilmington-nc.jpg" alt="Jeff Sikes with chimney sweep equipment Wilmington NC" style="width:100%;height:100%;object-fit:cover;" />
+      <img src="jeff-sikes-chimney-sweep-equipment-wilmington-nc.jpg" alt="Jeff Sikes with chimney sweep equipment Wilmington NC" loading="lazy" />
       <div class="intro-badge">
         <strong>19+</strong>
         <span>Years Serving<br>Wilmington</span>
@@ -873,16 +904,16 @@ a { color: inherit; }
     </div>
     <div class="cta-banner-actions">
       <a href="tel:9103996314" class="btn btn-outline-light">☎ (910) 399-6314</a>
-      <button class="btn" style="background:#fff;color:var(--rust);" onclick="navigate('contact')">Get in Touch</button>
+      <button class="btn btn-white" onclick="navigate('contact')">Get in Touch</button>
     </div>
   </div>
 
 
   <!-- Service Area -->
-  <section style="background:var(--paper);padding:4rem var(--body-pad,3rem);text-align:center;">
+  <section class="service-area">
     <span class="section-tag">Where We Work</span>
-    <h2 class="section-h2" style="margin:.5rem auto 1.25rem;">Areas We Serve</h2>
-    <p style="max-width:65ch;margin:0 auto;color:var(--mist);line-height:1.85;font-size:.95rem;">Jeff Sikes Chimney Services proudly serves Wilmington and the greater Cape Fear region, including Leland, Hampstead, Wrightsville Beach, Carolina Beach, Surf City, and surrounding communities in New Hanover, Brunswick, and Pender counties.</p>
+    <h2 class="section-h2" style="margin:.5rem auto 1.25rem;max-width:none;">Areas We Serve</h2>
+    <p class="section-lead" style="margin:0 auto;">Jeff Sikes Chimney Services proudly serves Wilmington and the greater Cape Fear region, including Leland, Hampstead, Wrightsville Beach, Carolina Beach, Surf City, and surrounding communities in New Hanover, Brunswick, and Pender counties.</p>
   </section>
 </div><!-- /home -->
 
@@ -894,7 +925,7 @@ a { color: inherit; }
 
   <div class="page-hero">
     <div class="page-hero-content">
-      <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>Services</div>
+      <div class="breadcrumb"><span onclick="navigate('home')">Home</span><span>›</span>Services</div>
       <span class="section-tag">What We Offer</span>
       <h1>Our <em>Services</em></h1>
     </div>
@@ -950,6 +981,7 @@ a { color: inherit; }
       <p class="svc-full-desc">Professional dryer vent cleaning to eliminate lint buildup, restore dryer efficiency, and reduce fire risk. A quick, affordable service that makes a significant difference in home safety.</p>
     </div>
     <div class="svc-full-card reveal">
+      <!-- TODO: this image (formerly IMG_9928.jpeg) is ~1.1MB — compress before production -->
       <img class="svc-full-img" src="full-chimney-replacement-wilmington-nc.jpg" alt="Full chimney replacement Wilmington NC" loading="lazy"/>
       <div class="svc-full-num">09</div><div class="svc-full-name">Full Chimney Replacement</div>
       <p class="svc-full-desc">When repair simply isn't enough, we handle complete chimney replacements from the roofline up. Skilled craftsmanship, proper materials, and upfront pricing so you always know what to expect.</p>
@@ -960,7 +992,7 @@ a { color: inherit; }
     <div><h3>Not Sure What You Need?</h3><p>Give us a call — we'll assess your chimney and give you an honest recommendation.</p></div>
     <div class="cta-banner-actions">
       <a href="tel:9103996314" class="btn btn-outline-light">☎ (910) 399-6314</a>
-      <button class="btn" style="background:#fff;color:var(--rust);" onclick="navigate('contact')">Contact Us</button>
+      <button class="btn btn-white" onclick="navigate('contact')">Contact Us</button>
     </div>
   </div>
 
@@ -974,7 +1006,7 @@ a { color: inherit; }
 
   <div class="page-hero">
     <div class="page-hero-content">
-      <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>About Us</div>
+      <div class="breadcrumb"><span onclick="navigate('home')">Home</span><span>›</span>About Us</div>
       <span class="section-tag">Our Story</span>
       <h1>A Family Built on <em>Trust</em></h1>
     </div>
@@ -982,9 +1014,9 @@ a { color: inherit; }
 
   <section class="about-story">
     <div class="about-story-img reveal-left">
-      
       <img src="jeff-sikes-chimney-service-truck-wilmington-nc.jpg" alt="Jeff Sikes Chimney Services truck Wilmington NC" loading="lazy" />
-    <div>
+    </div>
+    <div class="about-story-copy reveal-right">
       <span class="section-tag" style="color:var(--ember)">Our Promise</span>
       <h3 style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:#fff;margin:.6rem 0 1rem;line-height:1.2;">
         Local · Honest · Affordable · Professional
@@ -993,8 +1025,6 @@ a { color: inherit; }
         These aren't just words on a logo — they're the four principles Jeff built this business on in 2006 and still stands behind on every single job.
       </p>
     </div>
-  </div>
-
   </section>
 
   <section class="about-team">
@@ -1025,7 +1055,7 @@ a { color: inherit; }
     <div><h3>Experience the Difference</h3><p>See why Wilmington homeowners have trusted the Sikes family for nearly 20 years.</p></div>
     <div class="cta-banner-actions">
       <button class="btn btn-outline-light" onclick="navigate('reviews')">Read Reviews</button>
-      <button class="btn" style="background:#fff;color:var(--rust);" onclick="navigate('contact')">Book a Service</button>
+      <button class="btn btn-white" onclick="navigate('contact')">Book a Service</button>
     </div>
   </div>
 
@@ -1039,7 +1069,7 @@ a { color: inherit; }
 
   <div class="page-hero">
     <div class="page-hero-content">
-      <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>Reviews</div>
+      <div class="breadcrumb"><span onclick="navigate('home')">Home</span><span>›</span>Reviews</div>
       <span class="section-tag">What Customers Say</span>
       <h1>Trusted by <em>Wilmington</em></h1>
     </div>
@@ -1125,7 +1155,7 @@ a { color: inherit; }
     <div><h3>Ready to Become Our Next Happy Customer?</h3><p>Join hundreds of Wilmington homeowners who trust Jeff Sikes.</p></div>
     <div class="cta-banner-actions">
       <a href="tel:9103996314" class="btn btn-outline-light">☎ (910) 399-6314</a>
-      <button class="btn" style="background:#fff;color:var(--rust);" onclick="navigate('contact')">Book a Service</button>
+      <button class="btn btn-white" onclick="navigate('contact')">Book a Service</button>
     </div>
   </div>
 
@@ -1139,7 +1169,7 @@ a { color: inherit; }
 
   <div class="page-hero">
     <div class="page-hero-content">
-      <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>Contact</div>
+      <div class="breadcrumb"><span onclick="navigate('home')">Home</span><span>›</span>Contact</div>
       <span class="section-tag">Reach Out</span>
       <h1>Let's Talk About<br><em>Your Chimney</em></h1>
     </div>
@@ -1152,19 +1182,19 @@ a { color: inherit; }
       <p>Call, email, or send us a message and we'll get back to you promptly. We serve Wilmington and the greater Cape Fear region.</p>
       <div class="contact-items">
         <div class="contact-item">
-          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-icon" aria-hidden="true">📞</div>
           <div class="contact-item-body"><strong>Phone</strong><a href="tel:9103996314">(910) 399-6314</a></div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-icon" aria-hidden="true">✉️</div>
           <div class="contact-item-body"><strong>Email</strong><a href="mailto:JeffSikesChimneyservices@gmail.com">JeffSikesChimneyservices@gmail.com</a></div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-icon" aria-hidden="true">📍</div>
           <div class="contact-item-body"><strong>Address</strong><span>1832 N Kerr Ave, Wilmington, NC 28405</span></div>
         </div>
         <div class="contact-item">
-          <div class="contact-item-icon">🕐</div>
+          <div class="contact-item-icon" aria-hidden="true">🕐</div>
           <div class="contact-item-body"><strong>Business Hours</strong><span>Monday – Friday: 8:30 AM – 6:30 PM<br>Saturday: 8:30 AM – 6:30 PM<br>Sunday: Closed</span></div>
         </div>
       </div>
@@ -1178,15 +1208,15 @@ a { color: inherit; }
       </div>
       <form class="form" id="contactForm" onsubmit="handleMailto(event)">
         <div class="form-row">
-          <div class="field"><label>First Name *</label><input type="text" id="fname" placeholder="John" required /></div>
-          <div class="field"><label>Last Name</label><input type="text" id="lname" placeholder="Smith" /></div>
+          <div class="field"><label for="fname">First Name *</label><input type="text" id="fname" placeholder="John" required aria-required="true" /></div>
+          <div class="field"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Smith" /></div>
         </div>
         <div class="form-row">
-          <div class="field"><label>Phone</label><input type="tel" id="phone" placeholder="(910) 000-0000" /></div>
-          <div class="field"><label>Email *</label><input type="email" id="email" placeholder="you@email.com" required /></div>
+          <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="(910) 000-0000" /></div>
+          <div class="field"><label for="email">Email *</label><input type="email" id="email" placeholder="you@email.com" required aria-required="true" /></div>
         </div>
         <div class="field">
-          <label>Service Needed</label>
+          <label for="service">Service Needed</label>
           <select id="service">
             <option value="">Select a service…</option>
             <option>Chimney Cleaning / Sweep</option>
@@ -1203,7 +1233,7 @@ a { color: inherit; }
           </select>
         </div>
         <div class="field">
-          <label>Message</label>
+          <label for="message">Message</label>
           <textarea id="message" placeholder="Describe your chimney or fireplace situation, any concerns, or questions…"></textarea>
         </div>
         <button type="submit" class="btn btn-solid" style="align-self:flex-start;margin-top:.2rem">Send Request →</button>
@@ -1244,7 +1274,7 @@ a { color: inherit; }
 <!-- ══════════════════ FOOTER ══════════════════ -->
 <footer id="footer">
   <div class="footer-grid">
-    <div class="footer-brand-col" style="display:flex;align-items:center;gap:1.5rem;">
+    <div class="footer-brand-col">
       <img src="assets/images/jeff-sikes-chimney-services-logo.png" alt="Jeff Sikes Chimney Services" style="height:130px;width:auto;flex-shrink:0;opacity:0.9;" />
       <p class="footer-tagline">Wilmington's longest-running licensed chimney sweep company. CSIA certified, fully licensed, and specializing in real estate and HOA inspections. Honest work, fair prices, every time.</p>
     </div>
