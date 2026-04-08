@@ -288,21 +288,11 @@ a { color: inherit; }
 
 /* Page Hero Banner */
 .page-hero {
-  position: relative; overflow: hidden;
-  display: flex; align-items: flex-end;
-  min-height: 400px;
-}
-.page-hero-img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
-}
-.page-hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(22,17,13,.85) 0%, rgba(22,17,13,.45) 60%, rgba(22,17,13,.18) 100%);
+  background: var(--deep);
+  padding: 60px 0 40px;
 }
 .page-hero-content {
-  position: relative; z-index: 2;
-  padding: 3rem 3.5rem;
+  padding: 0 3.5rem;
   width: 100%;
 }
 .page-hero-content .section-tag { color: var(--gold); }
@@ -902,8 +892,6 @@ a { color: inherit; }
 <div id="page-services" class="page">
 
   <div class="page-hero">
-    <img class="page-hero-img" src="jeff-sikes-chimney-technician-working-wilmington-nc.jpg" alt="Jeff Sikes chimney technician working at customer home Wilmington NC" loading="lazy" style="object-position:center 20%;">
-    <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>Services</div>
       <span class="section-tag">What We Offer</span>
@@ -984,8 +972,6 @@ a { color: inherit; }
 <div id="page-about" class="page">
 
   <div class="page-hero">
-    <img class="page-hero-img" src="jeff-sikes-chimney-sweep-equipment-wilmington-nc.jpg" alt="Jeff Sikes with chimney sweep equipment Wilmington NC" loading="lazy" style="object-position:center 15%;">
-    <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>About Us</div>
       <span class="section-tag">Our Story</span>
@@ -1051,8 +1037,6 @@ a { color: inherit; }
 <div id="page-reviews" class="page">
 
   <div class="page-hero">
-    <img class="page-hero-img" src="jeff-sikes-gas-log-fireplace-installation-wilmington-nc.jpg" alt="Jeff Sikes gas log fireplace installation Wilmington NC" loading="lazy" style="object-position:center 40%;">
-    <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>Reviews</div>
       <span class="section-tag">What Customers Say</span>
@@ -1153,8 +1137,6 @@ a { color: inherit; }
 <div id="page-contact" class="page">
 
   <div class="page-hero">
-    <img class="page-hero-img" src="jeff-sikes-chimney-service-truck-wilmington-nc.jpg" alt="Jeff Sikes Chimney Services truck Wilmington NC" loading="lazy" style="object-position:center 35%;">
-    <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <div class="breadcrumb"><span onclick="navigate('home')" style="cursor:pointer">Home</span><span>›</span>Contact</div>
       <span class="section-tag">Reach Out</span>
