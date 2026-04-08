@@ -113,7 +113,7 @@ a { color: inherit; }
 ════════════════════════════════════════════ */
 #nav {
   position: fixed; inset: 0 0 auto 0; z-index: 900;
-  height: var(--nav-h);
+  min-height: var(--nav-h);
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 3rem;
   background: rgba(253,250,246,.96);
@@ -649,6 +649,7 @@ a { color: inherit; }
   :root { --nav-h: 62px; }
   #nav { padding: 0 1.5rem; }
   .nav-menu, .nav-tel { display: none; }
+  .nav-logo-sub { display: none; }
   .hamburger { display: flex; }
   .hero-copy-wrap { padding: 3rem 1.5rem; }
   .home-intro .intro-copy, .about-story-copy, .about-team-copy, .contact-details-col, .contact-form-col { padding: 3rem 1.5rem; }
